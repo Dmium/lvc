@@ -16,3 +16,11 @@ class WebWrapper():
             tracked_file = TrackedFile.load_file(path)
             pairs.append({path: tracked_file.commits[-1].datetime})
         return json.dumps(pairs)
+
+    # returns a json object containing the content of each commit stored in commits for a given file
+    def get_commits_for_path(self, path):
+        file_manager = FileManager()
+        if file_manager.check(path):
+            json_data = TrackedFile.load_file(path).get_json()
+            return json_data
+        return json.dumps([])
