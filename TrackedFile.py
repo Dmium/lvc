@@ -1,4 +1,5 @@
 import pickle
+import json
 
 class TrackedFile():
     def __init__(self, file_path):
@@ -31,6 +32,17 @@ class TrackedFile():
             loaded_file = pickle.load(f)
             return loaded_file
         return None
+
+    # returns a json object containing the content of each commit stored in commits
+    def get_json(self):
+        commit_data = []
+        for commit in self.commits:
+            # TODO: add timestamp to returned data
+            content = "debug content for commit ID %s" % str(commit.id)
+            # content = Diffing.get_version(""" some magic bullshit """, commit.id)
+            commit_data.append({'content': content})
+        commit_json = json.dumps(commit_data)
+        return commit_json
 
 
 # converts a file path to its corresponding dot file path, eg C:\example\foo.txt to C:\example\.foo.txt
