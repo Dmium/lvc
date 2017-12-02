@@ -11,15 +11,14 @@ env = Environment(
 @route('/')
 def index():
     template = env.get_template("index.html")
-    print(WebWrapper().get_paths_list_json())
+    nodes = list()
     try:
         ww = WebWrapper()
-        print("----")
-        print(ww.get_paths_list_json())
+        paths = ww.get_paths_list()
+        for path in paths:
+            nodes.append(Node(path, path, paths[path]))
     except:
         print("bleh")
-    test_node = Node("test", "test", time.time())
-    nodes = [test_node]
 
     return template.render(dir_nodes=nodes)
 
@@ -31,12 +30,12 @@ def styles():
 def js():
     return static_file('lvc.min.js', './webapp/')
 
-@route('/revisions/<fp>')
+@route('/revisions/<fp:path>')
 def revisions(fp):
     template = env.get_template("revisions.html")
     return template.render(filepath=fp)
 
-@route('/api/getRevisions/<fp>')
+@route('/api/getRevisions/<fp:path>')
 def get_revisions(fp):
     return WebWrapper().get_commits_for_path(fp)
 
