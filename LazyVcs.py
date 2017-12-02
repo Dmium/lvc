@@ -7,6 +7,7 @@ from watchdog.events import FileSystemEventHandler
 from Handler import Handler
 import os.path
 import json
+from webapp import Server
 
 path_lists = []
 if __name__ == "__main__":
@@ -17,8 +18,7 @@ if __name__ == "__main__":
     observer.schedule(event_handler, path, recursive=True)
     observer.start()
     try:
-        while True:
-            time.sleep(1)
+        Server.start()
     except KeyboardInterrupt:
         observer.stop()
     observer.join()
