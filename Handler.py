@@ -26,3 +26,5 @@ class Handler(FileSystemEventHandler):
         print("Created:")
         if not is_dot_file_path(event.src_path) and not self.file_manager.check(event.src_path):
             self.file_manager.track(event.src_path)
+        elif self.file_manager.check(event.src_path):
+            self.on_modified(event)
