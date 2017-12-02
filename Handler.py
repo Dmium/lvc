@@ -7,7 +7,10 @@ class Handler(FileSystemEventHandler):
         self.file_manager = FileManager()
 
     def on_modified(self, event):
-        cFile = TrackedFile(event.src_path)
+        if (file_manager.check(event.src_path)):
+            changedFile = TrackedFile.load_file(event.src_path)
+            changedFile.update()
 
     def on_created(self, event):
-        pass
+        if (!(file_manager.check(event.src_path)):
+            file_manage.track(event.src_path)
