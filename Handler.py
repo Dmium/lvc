@@ -1,13 +1,14 @@
 from FileManager import FileManager
 from watchdog.events import FileSystemEventHandler
 from TrackedFile import TrackedFile
+from TrackedFile import is_dot_file_path
 class Handler(FileSystemEventHandler):
     def load_handler(self):
         self.file_manager = FileManager()
 
     def on_modified(self, event):
-        print("Modded")
-        if (self.file_manager.check(event.src_path)):
+        if (not is_dot_file_path(event.src_path) and self.file_manager.check(event.src_path)):
+            print("Modded")
             changedFile = TrackedFile.load_file(event.src_path)
             if changedFile is None:
                 changedFile = TrackedFile(event.src_path)
