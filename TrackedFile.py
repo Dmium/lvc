@@ -20,7 +20,6 @@ class TrackedFile():
     # saves a TrackedFile class to a binary file, and return the dot_file_path
     def SaveFile(self):
         file_path = get_dot_file_path(self.file_name)
-        print(file_path)
         with open(file_path, 'wb') as f:
             dumped = pickle.dump(self, f)
             return file_path
