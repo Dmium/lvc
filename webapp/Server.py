@@ -1,10 +1,10 @@
 from bottle import route, run, static_file, request
 from jinja2 import Environment, FileSystemLoader
-from Node import Node
+from webapp.Node import Node
 import time
 
 env = Environment(
-    loader=FileSystemLoader('.'),
+    loader=FileSystemLoader('./webapp/'),
 )
 
 @route('/')
@@ -18,11 +18,11 @@ def index():
 
 @route('/css/styles.css')
 def styles():
-    return static_file('styles.css', '.')
+    return static_file('styles.css', './webapp/')
 
 @route('/js/lvc.min.js')
 def js():
-    return static_file('lvc.min.js', '.')
+    return static_file('lvc.min.js', './webapp/')
 
 @route('/revisions/<fp>')
 def revisions(fp):
@@ -39,5 +39,5 @@ def add_file():
     print(filename)
     return 'success'
 
-if __name__ == "__main__":
+def start():
     run(host='localhost', port=8080)
