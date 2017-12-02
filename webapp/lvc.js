@@ -14,12 +14,13 @@ function getRevisions(){
 	jQuery.get('/api/getRevisions/' + fp, function(r){
 		var json = $.parseJSON(r);
 		if(json.length == 0){
-			$('#lvc-revisions-container').html('<p>No revisions found for this file.</p>');
+			$('#lvc-revisions-container').html('No revisions found for this file.');
 		} else {
 			self.revisions = json;
+
 			for(revision in json){
 				console.log(json[revision]);
-				$('#lvc-revisions-container').html('<p>' + json[revision].content + '</p>');
+				$('#lvc-revisions-container').html(json[revision].content);
 			}
 
 			$('#lvc-commit-slider').slider({
@@ -30,7 +31,7 @@ function getRevisions(){
 				slide: function(event, ui){
 					var current_point = ui.value;
 					console.log(current_point);
-					$('#lvc-revisions-container').html('<p>'+json[current_point].content + '</p>');
+					$('#lvc-revisions-container').html(json[current_point].content);
 				}
 			})
 		}
