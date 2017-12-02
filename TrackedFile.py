@@ -3,6 +3,7 @@ import pickle
 import json
 from Commit import Commit
 import time
+import os
 
 class TrackedFile():
     def __init__(self, file_path):
@@ -25,9 +26,10 @@ class TrackedFile():
     # takes the path of the file whose TrackedFile class should be loaded
     def load_file(file_path):
         dot_file_path = get_dot_file_path(file_path)
-        with open(dot_file_path, 'rb') as f:
-            loaded_file = pickle.load(f)
-            return loaded_file
+        if os.path.isfile(dot_file_path):
+            with open(dot_file_path, 'rb') as f:
+                loaded_file = pickle.load(f)
+                return loaded_file
         return None
 
     # returns a json object containing the content of each commit stored in commits
