@@ -5,7 +5,10 @@ from watchdog.observers import Observer
 from watchdog.events import LoggingEventHandler
 from watchdog.events import FileSystemEventHandler
 from Handler import Handler
+import os.path
+import json
 
+path_lists = []
 if __name__ == "__main__":
     path = sys.argv[1] if len(sys.argv) > 1 else '.'
     event_handler = Handler()
