@@ -1,3 +1,4 @@
+from Diffing import Diffing
 class Commit():
     def __init__(self, id, datetime, last_commit, current_file):
         self.id = id
