@@ -1,28 +1,28 @@
 import pickle
 
 class TrackedFile():
-    def __init__(self, file_name):
-        self.file_name = file_name
+    def __init__(self, file_path):
+        self.file_path = file_path
         self.commits = []
         self.current_content = ""
 
-    def read_new():
-        new_content = current_file
-        with open(file_name, 'r') as f:
+    # read and return the contents of the file
+    def read_new(self):
+        new_content = self.current_content
+        with open(self.file_path, 'r') as f:
             new_content = f.read()
         return new_content
 
-    def read_new_into_current():
-        current_content = read_new()
-
-
+    # read the contents of the file and store them in self.current_content
+    def read_new_into_current(self):
+        self.current_content = read_new()
 
     # saves a TrackedFile class to a binary file, and return the dot_file_path
     def SaveFile(self):
-        file_path = get_dot_file_path(self.file_name)
-        with open(file_path, 'wb') as f:
+        dot_file_path = get_dot_file_path(self.file_path)
+        with open(dot_file_path, 'wb') as f:
             dumped = pickle.dump(self, f)
-            return file_path
+            return dot_file_path
 
     # takes the path of the file whose TrackedFile class should be loaded
     def LoadFile(file_path):
