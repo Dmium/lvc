@@ -1,4 +1,4 @@
-from bottle import route, run, static_file
+from bottle import route, run, static_file, request
 from jinja2 import Environment, FileSystemLoader
 from Node import Node
 import time
@@ -32,6 +32,12 @@ def revisions(fp):
 @route('/api/getRevisions')
 def get_revisions():
     return "[{\"timestamp\": 1512218675, \"content\":\"bla bla bla\"}]"
+
+@route('/api/addFile', method='POST')
+def add_file():
+    filename = request.forms.get('filename')
+    print(filename)
+    return 'success'
 
 if __name__ == "__main__":
     run(host='localhost', port=8080)

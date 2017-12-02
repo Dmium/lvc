@@ -6,3 +6,11 @@
 .lvc-brand{
 	color: white !important;
 }
+
+#add-file{
+	display: none;
+}
+
+.lvc-btn{
+	cursor: pointer;
+}
