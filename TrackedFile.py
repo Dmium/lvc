@@ -18,14 +18,14 @@ class TrackedFile():
         self.current_content = read_new()
 
     # saves a TrackedFile class to a binary file, and return the dot_file_path
-    def SaveFile(self):
+    def save_file(self):
         dot_file_path = get_dot_file_path(self.file_path)
         with open(dot_file_path, 'wb') as f:
             dumped = pickle.dump(self, f)
             return dot_file_path
 
     # takes the path of the file whose TrackedFile class should be loaded
-    def LoadFile(file_path):
+    def load_file(file_path):
         dot_file_path = get_dot_file_path(file_path)
         with open(dot_file_path, 'rb') as f:
             loaded_file = pickle.load(f)
