@@ -15,13 +15,30 @@ class Handler(FileSystemEventHandler):
 
     def diff(self, path):
         pass
-class LineChange():
-    def __init__(self, add, line):
+
+class Change():
+    def __init__(self, id):
+        self.id = id
+
+class Line_Change(Change):
+    def __init__(self, add, lineno, line):
         self.add = add
+        self.lineno = lineno
         self.line = line
 
+
+class Dir_Change(Change):
+    def __init__(self, id, effect, path):
+        super.__init__(id)
+        self.effect = effect
+        self.path = path
+
+
 class Commit():
-    pass
+    def __init__(self, id):
+        self.id = id
+        self.line_changes = []
+        self.dir_changes = []
 
 
 if __name__ == "__main__":
