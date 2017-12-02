@@ -1,18 +1,22 @@
 import pickle
 import json
-from Commit import Commit
-import time
 
 class TrackedFile():
     def __init__(self, file_path):
         self.file_path = file_path
         self.commits = []
+        self.current_content = ""
 
     # read and return the contents of the file
     def read_new(self):
+        new_content = self.current_content
         with open(self.file_path, 'r') as f:
             new_content = f.read()
         return new_content
+
+    # read the contents of the file and store them in self.current_content
+    def read_new_into_current(self):
+        self.current_content = read_new()
 
     # saves a TrackedFile class to a binary file, and return the dot_file_path
     def save_file(self):
@@ -33,18 +37,12 @@ class TrackedFile():
     def get_json(self):
         commit_data = []
         for commit in self.commits:
-            content = commit.get_version()
-            commit_data.append({'timestamp': commit.datetime, 'content': content})
+            # TODO: add timestamp to returned data
+            content = "debug content for commit ID %s" % str(commit.id)
+            # content = Diffing.get_version(""" some magic bullshit """, commit.id)
+            commit_data.append({'content': content})
         commit_json = json.dumps(commit_data)
         return commit_json
-
-    # create and store a new commit and save file to binary
-    def update(self):
-        if (len(self.commits) == 0):
-            self.commits.append(Commit(time.time(), None, self.read_new()))
-        else:
-            self.commits.append(Commit(time.time(), self.commits[-1], self.read_new()))
-        self.save_file()
 
 
 # converts a file path to its corresponding dot file path, eg C:\example\foo.txt to C:\example\.foo.txt
