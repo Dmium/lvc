@@ -6,6 +6,3 @@ class Handler(FileSystemEventHandler):
 
     def on_created(self, event):
         pass
-
-    def diff(self, path):
-        pass
