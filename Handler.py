@@ -9,7 +9,10 @@ class Handler(FileSystemEventHandler):
         print("Modded")
         if (self.file_manager.check(event.src_path)):
             changedFile = TrackedFile.load_file(event.src_path)
+            if changedFile is None:
+                changedFile = TrackedFile(event.src_path)
             changedFile.update()
+
 
     def on_created(self, event):
         print("Created:")
