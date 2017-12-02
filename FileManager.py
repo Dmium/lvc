@@ -4,7 +4,7 @@ class FileManager():
         load()
 
     def load(self):
-        if !os.path.isfile(".file_list"):# messy should clean
+        if not os.path.isfile(".file_list"):# messy should clean
             with open(".file_list", 'wb') as f:
                 json.dumps(self.path_lists, f)
         else:
