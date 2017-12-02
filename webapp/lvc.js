@@ -16,10 +16,23 @@ function getRevisions(){
 		if(json.length == 0){
 			$('#lvc-revisions-container').html('<p>No revisions found for this file.</p>');
 		} else {
+			self.revisions = json;
 			for(revision in json){
 				console.log(json[revision]);
 				$('#lvc-revisions-container').html('<p>' + json[revision].content + '</p>');
 			}
+
+			$('#lvc-commit-slider').slider({
+				value: self.revisions.length - 1,
+				min: 0,
+				max: self.revisions.length - 1,
+				step: 1,
+				slide: function(event, ui){
+					var current_point = ui.value;
+					console.log(current_point);
+					$('#lvc-revisions-container').html('<p>'+json[current_point].content + '</p>');
+				}
+			})
 		}
 	});
 }
