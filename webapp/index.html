@@ -4,9 +4,8 @@
 		<title>Lazy Version Control</title>
 		<link rel="stylesheet" href="/css/styles.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<script>
-			<!-- Stuff !-->
-		</script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+		<script src="/js/lvc.min.js"></script>
 	</head>
 	<body>
 		<nav class='navbar navbar-light lvc-navbar'>
@@ -25,7 +24,7 @@
 					<tbody>
 						{% for node in dir_nodes %}
 							<tr>
-								<td><a href="{{ node.url }}">{{ node.name }}</a></li></td>
+								<td><a href="/revisions/{{ node.url }}">{{ node.name }}</a></li></td>
 								<td>{{ node.get_date() }}</td>
 							</tr>
 						{% endfor %}

@@ -11,7 +11,7 @@ env = Environment(
 def index():
     template = env.get_template("index.html")
 
-    test_node = Node("localhost", "Test Node", time.time())
+    test_node = Node("test", "test", time.time())
     nodes = [test_node]
 
     return template.render(dir_nodes=nodes)
@@ -23,10 +23,15 @@ def styles():
 @route('/js/lvc.min.js')
 def js():
     return static_file('lvc.min.js', '.')
+
 @route('/revisions/<fp>')
 def revisions(fp):
     template = env.get_template("revisions.html")
     return template.render(filepath=fp)
+
+@route('/api/getRevisions')
+def get_revisions():
+    return "[{\"timestamp\": 1512218675, \"content\":\"bla bla bla\"}]"
 
 if __name__ == "__main__":
     run(host='localhost', port=8080)
