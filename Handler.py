@@ -10,7 +10,6 @@ class Handler(FileSystemEventHandler):
             changedFile = TrackedFile.load_file(event.src_path)
             changedFile.update()
 
-
-
     def on_created(self, event):
-        pass
+        if (!(file_manager.check(event.src_path)):
+            file_manage.track(event.src_path)
