@@ -11,7 +11,10 @@ env = Environment(
 @route('/')
 def index():
     template = env.get_template("index.html")
-    print(WebWrapper().get_paths_list())
+    try:
+        print(WebWrapper().get_paths_list())
+    except:
+        print("bleh")
     test_node = Node("test", "test", time.time())
     nodes = [test_node]
 
