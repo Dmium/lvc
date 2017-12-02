@@ -9,11 +9,17 @@ $(document).ready(function(){
 });
 
 function getRevisions(){
-	jQuery.get('/api/getRevisions', function(r){
+	var fp = window.location.pathname.substring(11)
+	fp = encodeURIComponent(fp);
+	jQuery.get('/api/getRevisions/' + fp, function(r){
 		var json = $.parseJSON(r);
-		for(revision in json){
-			console.log(json[revision]);
-			$('#lvc-revisions-container').html('<p>' + json[revision].content + '</p>');
+		if(json.length == 0){
+			$('#lvc-revisions-container').html('<p>No revisions found for this file.</p>');
+		} else {
+			for(revision in json){
+				console.log(json[revision]);
+				$('#lvc-revisions-container').html('<p>' + json[revision].content + '</p>');
+			}
 		}
 	});
 }
