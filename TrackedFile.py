@@ -65,3 +65,18 @@ def get_dot_file_path(file_path):
     else:
         file_name = "." + file_path
     return file_name
+
+def is_dot_file_path(file_path):
+    # I am still so, so sorry
+    last_fslash_index = file_path.rfind("/")
+    last_bslash_index = file_path.rfind("\\")
+    if last_fslash_index != -1:
+        if file_path[last_fslash_index + 1] == ".":
+            return True
+    elif last_bslash_index != -1:
+        if file_path[last_bslash_index + 1] == ".":
+            return True
+    else:
+        if file_path[0] == ".":
+            return True
+    return False
