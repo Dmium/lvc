@@ -4,11 +4,9 @@ class Handler(FileSystemEventHandler):
     def __init__(self):
         super.__init__(self)
         self.file_manager = FileManager()
+
     def on_modified(self, event):
-        with open(".file_list","r") as f:
-            contents = f.read()
-            pathlist = json.loads(contents)
-        if (event.src_path in pathlist):
+        if (file_manager.check(event.src_path)):
             changedFile = TrackedFile.load_file(event.src_path)
             changedFile.update()
 

@@ -15,3 +15,6 @@ class FileManager():
         self.path_lists.append(path)
         with open(".file_list", 'wb') as f:
             json.dump(self.path_lists, f)
+
+    def check(self, path):
+        return (path in self.path_lists)
