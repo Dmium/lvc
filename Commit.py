@@ -1,5 +1,6 @@
 class Commit():
-    def __init__(self, id):
+    def __init__(self, id, datetime, line_delta):
         self.id = id
-        self.line_changes = []
+        self.datetime - datetime
+        self.line_delta = []
         self.dir_changes = []
