@@ -20,10 +20,10 @@ class WebWrapper():
     def get_paths_list(self):
         file_manager = FileManager()
         paths = file_manager.path_lists
-        pairs = []
+        pairs = {}
         for path in paths:
             tracked_file = TrackedFile.load_file(path)
-            pairs.append({path: tracked_file.commits[-1].datetime})
+            pairs[path] = tracked_file.commits[-1].datetime
         return pairs
 
     # returns a json object containing the content of each commit stored in commits for a given file
