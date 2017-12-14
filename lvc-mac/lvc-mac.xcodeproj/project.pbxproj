@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14F637061FE2FEBD00FF97F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F637051FE2FEBD00FF97F6 /* AppDelegate.swift */; };
+		14F637081FE2FEBD00FF97F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F637071FE2FEBD00FF97F6 /* ViewController.swift */; };
+		14F6370A1FE2FEBD00FF97F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F637091FE2FEBD00FF97F6 /* Assets.xcassets */; };
+		14F6370D1FE2FEBD00FF97F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F6370B1FE2FEBD00FF97F6 /* Main.storyboard */; };
+		14F637181FE2FEBE00FF97F6 /* lvc_macTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F637171FE2FEBE00FF97F6 /* lvc_macTests.swift */; };
+		14F637231FE2FEBE00FF97F6 /* lvc_macUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F637221FE2FEBE00FF97F6 /* lvc_macUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14F637141FE2FEBE00FF97F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14F636FA1FE2FEBD00FF97F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14F637011FE2FEBD00FF97F6;
+			remoteInfo = "lvc-mac";
+		};
+		14F6371F1FE2FEBE00FF97F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14F636FA1FE2FEBD00FF97F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14F637011FE2FEBD00FF97F6;
+			remoteInfo = "lvc-mac";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14F637021FE2FEBD00FF97F6 /* lvc-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lvc-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14F637051FE2FEBD00FF97F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14F637071FE2FEBD00FF97F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14F637091FE2FEBD00FF97F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14F6370C1FE2FEBD00FF97F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14F6370E1FE2FEBD00FF97F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14F637131FE2FEBE00FF97F6 /* lvc-macTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "lvc-macTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14F637171FE2FEBE00FF97F6 /* lvc_macTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lvc_macTests.swift; sourceTree = "<group>"; };
+		14F637191FE2FEBE00FF97F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14F6371E1FE2FEBE00FF97F6 /* lvc-macUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "lvc-macUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14F637221FE2FEBE00FF97F6 /* lvc_macUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lvc_macUITests.swift; sourceTree = "<group>"; };
+		14F637241FE2FEBE00FF97F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14F636FF1FE2FEBD00FF97F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14F637101FE2FEBE00FF97F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14F6371B1FE2FEBE00FF97F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14F636F91FE2FEBD00FF97F6 = {
+			isa = PBXGroup;
+			children = (
+				14F637041FE2FEBD00FF97F6 /* lvc-mac */,
+				14F637161FE2FEBE00FF97F6 /* lvc-macTests */,
+				14F637211FE2FEBE00FF97F6 /* lvc-macUITests */,
+				14F637031FE2FEBD00FF97F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14F637031FE2FEBD00FF97F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14F637021FE2FEBD00FF97F6 /* lvc-mac.app */,
+				14F637131FE2FEBE00FF97F6 /* lvc-macTests.xctest */,
+				14F6371E1FE2FEBE00FF97F6 /* lvc-macUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14F637041FE2FEBD00FF97F6 /* lvc-mac */ = {
+			isa = PBXGroup;
+			children = (
+				14F637301FE2FFDE00FF97F6 /* Controls */,
+				14F637051FE2FEBD00FF97F6 /* AppDelegate.swift */,
+				14F637071FE2FEBD00FF97F6 /* ViewController.swift */,
+				14F637091FE2FEBD00FF97F6 /* Assets.xcassets */,
+				14F6370B1FE2FEBD00FF97F6 /* Main.storyboard */,
+				14F6370E1FE2FEBD00FF97F6 /* Info.plist */,
+			);
+			path = "lvc-mac";
+			sourceTree = "<group>";
+		};
+		14F637161FE2FEBE00FF97F6 /* lvc-macTests */ = {
+			isa = PBXGroup;
+			children = (
+				14F637171FE2FEBE00FF97F6 /* lvc_macTests.swift */,
+				14F637191FE2FEBE00FF97F6 /* Info.plist */,
+			);
+			path = "lvc-macTests";
+			sourceTree = "<group>";
+		};
+		14F637211FE2FEBE00FF97F6 /* lvc-macUITests */ = {
+			isa = PBXGroup;
+			children = (
+				14F637221FE2FEBE00FF97F6 /* lvc_macUITests.swift */,
+				14F637241FE2FEBE00FF97F6 /* Info.plist */,
+			);
+			path = "lvc-macUITests";
+			sourceTree = "<group>";
+		};
+		14F637301FE2FFDE00FF97F6 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14F637011FE2FEBD00FF97F6 /* lvc-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14F637271FE2FEBE00FF97F6 /* Build configuration list for PBXNativeTarget "lvc-mac" */;
+			buildPhases = (
+				14F636FE1FE2FEBD00FF97F6 /* Sources */,
+				14F636FF1FE2FEBD00FF97F6 /* Frameworks */,
+				14F637001FE2FEBD00FF97F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "lvc-mac";
+			productName = "lvc-mac";
+			productReference = 14F637021FE2FEBD00FF97F6 /* lvc-mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14F637121FE2FEBE00FF97F6 /* lvc-macTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14F6372A1FE2FEBE00FF97F6 /* Build configuration list for PBXNativeTarget "lvc-macTests" */;
+			buildPhases = (
+				14F6370F1FE2FEBE00FF97F6 /* Sources */,
+				14F637101FE2FEBE00FF97F6 /* Frameworks */,
+				14F637111FE2FEBE00FF97F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14F637151FE2FEBE00FF97F6 /* PBXTargetDependency */,
+			);
+			name = "lvc-macTests";
+			productName = "lvc-macTests";
+			productReference = 14F637131FE2FEBE00FF97F6 /* lvc-macTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14F6371D1FE2FEBE00FF97F6 /* lvc-macUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14F6372D1FE2FEBE00FF97F6 /* Build configuration list for PBXNativeTarget "lvc-macUITests" */;
+			buildPhases = (
+				14F6371A1FE2FEBE00FF97F6 /* Sources */,
+				14F6371B1FE2FEBE00FF97F6 /* Frameworks */,
+				14F6371C1FE2FEBE00FF97F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14F637201FE2FEBE00FF97F6 /* PBXTargetDependency */,
+			);
+			name = "lvc-macUITests";
+			productName = "lvc-macUITests";
+			productReference = 14F6371E1FE2FEBE00FF97F6 /* lvc-macUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14F636FA1FE2FEBD00FF97F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Zack Clark-Kington";
+				TargetAttributes = {
+					14F637011FE2FEBD00FF97F6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = K4R89L9XSN;
+						ProvisioningStyle = Automatic;
+					};
+					14F637121FE2FEBE00FF97F6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = K4R89L9XSN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 14F637011FE2FEBD00FF97F6;
+					};
+					14F6371D1FE2FEBE00FF97F6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = K4R89L9XSN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 14F637011FE2FEBD00FF97F6;
+					};
+				};
+			};
+			buildConfigurationList = 14F636FD1FE2FEBD00FF97F6 /* Build configuration list for PBXProject "lvc-mac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14F636F91FE2FEBD00FF97F6;
+			productRefGroup = 14F637031FE2FEBD00FF97F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14F637011FE2FEBD00FF97F6 /* lvc-mac */,
+				14F637121FE2FEBE00FF97F6 /* lvc-macTests */,
+				14F6371D1FE2FEBE00FF97F6 /* lvc-macUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14F637001FE2FEBD00FF97F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14F6370A1FE2FEBD00FF97F6 /* Assets.xcassets in Resources */,
+				14F6370D1FE2FEBD00FF97F6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14F637111FE2FEBE00FF97F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14F6371C1FE2FEBE00FF97F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14F636FE1FE2FEBD00FF97F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14F637081FE2FEBD00FF97F6 /* ViewController.swift in Sources */,
+				14F637061FE2FEBD00FF97F6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14F6370F1FE2FEBE00FF97F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14F637181FE2FEBE00FF97F6 /* lvc_macTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14F6371A1FE2FEBE00FF97F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14F637231FE2FEBE00FF97F6 /* lvc_macUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14F637151FE2FEBE00FF97F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14F637011FE2FEBD00FF97F6 /* lvc-mac */;
+			targetProxy = 14F637141FE2FEBE00FF97F6 /* PBXContainerItemProxy */;
+		};
+		14F637201FE2FEBE00FF97F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14F637011FE2FEBD00FF97F6 /* lvc-mac */;
+			targetProxy = 14F6371F1FE2FEBE00FF97F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14F6370B1FE2FEBD00FF97F6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14F6370C1FE2FEBD00FF97F6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14F637251FE2FEBE00FF97F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14F637261FE2FEBE00FF97F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		14F637281FE2FEBE00FF97F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K4R89L9XSN;
+				INFOPLIST_FILE = "lvc-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ck.lvc-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		14F637291FE2FEBE00FF97F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K4R89L9XSN;
+				INFOPLIST_FILE = "lvc-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ck.lvc-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		14F6372B1FE2FEBE00FF97F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K4R89L9XSN;
+				INFOPLIST_FILE = "lvc-macTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ck.lvc-macTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lvc-mac.app/Contents/MacOS/lvc-mac";
+			};
+			name = Debug;
+		};
+		14F6372C1FE2FEBE00FF97F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K4R89L9XSN;
+				INFOPLIST_FILE = "lvc-macTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ck.lvc-macTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lvc-mac.app/Contents/MacOS/lvc-mac";
+			};
+			name = Release;
+		};
+		14F6372E1FE2FEBE00FF97F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K4R89L9XSN;
+				INFOPLIST_FILE = "lvc-macUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ck.lvc-macUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "lvc-mac";
+			};
+			name = Debug;
+		};
+		14F6372F1FE2FEBE00FF97F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K4R89L9XSN;
+				INFOPLIST_FILE = "lvc-macUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ck.lvc-macUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "lvc-mac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14F636FD1FE2FEBD00FF97F6 /* Build configuration list for PBXProject "lvc-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14F637251FE2FEBE00FF97F6 /* Debug */,
+				14F637261FE2FEBE00FF97F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14F637271FE2FEBE00FF97F6 /* Build configuration list for PBXNativeTarget "lvc-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14F637281FE2FEBE00FF97F6 /* Debug */,
+				14F637291FE2FEBE00FF97F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		14F6372A1FE2FEBE00FF97F6 /* Build configuration list for PBXNativeTarget "lvc-macTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14F6372B1FE2FEBE00FF97F6 /* Debug */,
+				14F6372C1FE2FEBE00FF97F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		14F6372D1FE2FEBE00FF97F6 /* Build configuration list for PBXNativeTarget "lvc-macUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14F6372E1FE2FEBE00FF97F6 /* Debug */,
+				14F6372F1FE2FEBE00FF97F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14F636FA1FE2FEBD00FF97F6 /* Project object */;
+}
