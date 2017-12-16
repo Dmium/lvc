@@ -49,5 +49,11 @@ def add_file():
 def get_file_list():
     return WebWrapper().get_paths_list_json()
 
-def start():
-    run(host='localhost', port=8080)
+@route('/api/getNumberRevisions/<fp:path>')
+def get_number_revisions(fp):
+    return str(WebWrapper().get_number_commits_for_path(fp))
+@route('/api/getRevisionByIndex/<index>/<fp:path>')
+def get_revision_by_index(index, fp):
+    return WebWrapper().get_commit_for_index(int(index), fp)
+def start(host, port):
+    run(host=host, port=port)
