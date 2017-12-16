@@ -13,14 +13,8 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     private var numRows : Int = 0
     private var fileNames : [String] = []
     private var fileDates : [NSNumber] = []
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        versionedDocuments.dataSource = self
-        versionedDocuments.delegate = self
-        
+    
+    func getVersionedDocuments(){
         let url = URL(string: "http://localhost:8080/api/getFileList")
         let request = URLRequest(url: url!)
         let response:AutoreleasingUnsafeMutablePointer<URLResponse?>?=nil
@@ -34,14 +28,23 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
                 fileNames.append(file.key as! String)
                 fileDates.append(file.value as! NSNumber)
             }
-            
-           
-            
-            versionedDocuments.reloadData()
         } catch(let e){
             let alert = NSAlert.init(error: e)
             alert.runModal()
         }
+
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        self.versionedDocuments.dataSource = self
+        self.versionedDocuments.delegate = self
+        
+        self.getVersionedDocuments()
+        
+        self.versionedDocuments.reloadData()
     }
 
     override var representedObject: Any? {
@@ -63,25 +66,18 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             text = String(fileDates[row] as! Int)
         }
         
-        print(text)
-        
         return text
     }
     
-    /*func tableView(_ tableView: NSTableView, dataCellFor tableColumn: NSTableColumn?, row: Int) -> NSCell? {
-        let cell = tableColumn?.dataCell(forRow: row) as! NSCell
-        var text = ""
-        
-        if(tableColumn?.headerCell.title == "Name"){
-            text = fileNames[row]
-        } else {
-            text = String(fileDates[row] as! Int)
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        let fileIndex: Int = self.versionedDocuments.selectedRow
+        if(fileIndex >= 0 && fileIndex < self.fileNames.count){
+            let fileName: String = self.fileNames[fileIndex]
+            let fileDate: NSNumber = self.fileDates[fileIndex]
+            performSegue(withIdentifier: "showRevisions", sender: nil)
+            
         }
-        cell.title = text
-        print(cell.title)
-        
-        return cell
-    }*/
+    }
 
 }
 

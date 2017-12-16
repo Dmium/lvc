@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		148B0D7C1FE4A10F00BBC4C1 /* RevisionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148B0D7B1FE4A10F00BBC4C1 /* RevisionsViewController.swift */; };
 		14F637061FE2FEBD00FF97F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F637051FE2FEBD00FF97F6 /* AppDelegate.swift */; };
 		14F637081FE2FEBD00FF97F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F637071FE2FEBD00FF97F6 /* ViewController.swift */; };
 		14F6370A1FE2FEBD00FF97F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F637091FE2FEBD00FF97F6 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		148B0D7B1FE4A10F00BBC4C1 /* RevisionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevisionsViewController.swift; sourceTree = "<group>"; };
 		14F637021FE2FEBD00FF97F6 /* lvc-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lvc-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F637051FE2FEBD00FF97F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F637071FE2FEBD00FF97F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,12 +97,12 @@
 		14F637041FE2FEBD00FF97F6 /* lvc-mac */ = {
 			isa = PBXGroup;
 			children = (
-				14F637301FE2FFDE00FF97F6 /* Controls */,
 				14F637051FE2FEBD00FF97F6 /* AppDelegate.swift */,
 				14F637071FE2FEBD00FF97F6 /* ViewController.swift */,
 				14F637091FE2FEBD00FF97F6 /* Assets.xcassets */,
 				14F6370B1FE2FEBD00FF97F6 /* Main.storyboard */,
 				14F6370E1FE2FEBD00FF97F6 /* Info.plist */,
+				148B0D7B1FE4A10F00BBC4C1 /* RevisionsViewController.swift */,
 			);
 			path = "lvc-mac";
 			sourceTree = "<group>";
@@ -121,13 +123,6 @@
 				14F637241FE2FEBE00FF97F6 /* Info.plist */,
 			);
 			path = "lvc-macUITests";
-			sourceTree = "<group>";
-		};
-		14F637301FE2FFDE00FF97F6 /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F637081FE2FEBD00FF97F6 /* ViewController.swift in Sources */,
+				148B0D7C1FE4A10F00BBC4C1 /* RevisionsViewController.swift in Sources */,
 				14F637061FE2FEBD00FF97F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +511,7 @@
 				14F637291FE2FEBE00FF97F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14F6372A1FE2FEBE00FF97F6 /* Build configuration list for PBXNativeTarget "lvc-macTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +520,7 @@
 				14F6372C1FE2FEBE00FF97F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14F6372D1FE2FEBE00FF97F6 /* Build configuration list for PBXNativeTarget "lvc-macUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +529,7 @@
 				14F6372F1FE2FEBE00FF97F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
