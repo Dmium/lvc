@@ -32,6 +32,12 @@ class TrackedFile():
                 return loaded_file
         return None
 
+    def get_num_commits(self):
+        return len(self.commits)
+
+    def get_commit(self, index):
+        return self.commits[index]
+    
     # returns a json object containing the content of each commit stored in commits
     def get_json(self):
         commit_data = []

@@ -29,10 +29,21 @@ class WebWrapper():
     # returns a json object containing the content of each commit stored in commits for a given file
     def get_commits_for_path(self, path):
         file_manager = FileManager()
-        print("path: " + path)
         print(file_manager.path_lists)
         if file_manager.check(path):
-            print("reached a")
             json_data = TrackedFile.load_file(path).get_json()
             return json_data
         return json.dumps([])
+
+    def get_number_commits_for_path(self, path):
+        file_manager = FileManager()
+        if file_manager.check(path):
+            result = TrackedFile.load_file(path).get_num_commits()
+            return result
+        return 0
+
+    def get_commit_for_index(self, index, path):
+        file_manager = FileManager()
+        if file_manager.check(path) and index < self.get_number_commits_for_path(path):
+            return TrackedFile.load_file(path).get_commit(index).get_version()
+        return ""
