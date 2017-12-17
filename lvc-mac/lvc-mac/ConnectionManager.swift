@@ -63,9 +63,8 @@ class ConnectionManager{
         }
     }
     
-    public func getLatestRevision(fp: String) -> String{
-        let latestRevisionIndex : Int = self.getNumberOfRevisions(fp: fp) - 1
-        let requestEndpoint = "/api/getRevisionByIndex/" + String(latestRevisionIndex) + "/" + fp
+    public func getRevisionByIndex(fp: String, index: Int) -> String{
+        let requestEndpoint = "/api/getRevisionByIndex/" + String(index) + "/" + fp
         let responseData : Data = makeRequest(requestEndpoint: requestEndpoint) as! Data
         do{
             let jsonDict = try JSONSerialization.jsonObject(with: responseData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSMutableDictionary
@@ -73,5 +72,10 @@ class ConnectionManager{
         } catch {
             return ""
         }
+    }
+    
+    public func getLatestRevision(fp: String) -> String{
+        let latestRevisionIndex : Int = self.getNumberOfRevisions(fp: fp) - 1
+        return getRevisionByIndex(fp: fp, index: latestRevisionIndex)
     }
 }

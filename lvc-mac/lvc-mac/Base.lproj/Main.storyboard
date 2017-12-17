@@ -282,9 +282,18 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5sg-W9-Nzx">
+                                <rect key="frame" x="4" y="-2" width="442" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" allowsTickMarkValuesOnly="YES" sliderType="linear" id="gcE-Xx-ffF"/>
+                                <connections>
+                                    <action selector="revisionSliderMoved:" target="kIG-ob-JSE" id="st0-oh-B0c"/>
+                                </connections>
+                            </slider>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="revisionSlider" destination="5sg-W9-Nzx" id="fga-92-npX"/>
                         <outlet property="revisionTextDisplay" destination="xVi-d2-r4b" id="apB-nO-T8p"/>
                     </connections>
                 </viewController>
