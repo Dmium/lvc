@@ -10,10 +10,16 @@ import Cocoa
 
 class RevisionsViewController : NSViewController{
     @IBOutlet var revisionTextDisplay: NSTextView!
+    
+    var fp : String = ""
+    
+    var connManager : ConnectionManager? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        let contents = connManager?.getLatestRevision(fp: self.fp)
+        revisionTextDisplay.string = contents
     }
     
     override var representedObject: Any? {

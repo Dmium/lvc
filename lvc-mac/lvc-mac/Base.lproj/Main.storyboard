@@ -223,11 +223,11 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="30i-B5-YKJ">
-                                    <rect key="frame" x="1" y="-16" width="0.0" height="16"/>
+                                    <rect key="frame" x="-7" y="-15" width="0.0" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="SQ6-l2-74y">
-                                    <rect key="frame" x="-15" y="0.0" width="16" height="0.0"/>
+                                    <rect key="frame" x="-15" y="-8" width="15" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="5NO-2r-KKu">
@@ -240,30 +240,12 @@
                     <connections>
                         <outlet property="versionedDocuments" destination="YfG-fR-Jor" id="lP6-xy-o5g"/>
                         <outlet property="versioned_files_table" destination="Jdu-KZ-npn" id="Wl8-RL-FYw"/>
-                        <segue destination="Dwg-bX-DJQ" kind="show" identifier="showRevisions" id="mDc-bB-WsJ"/>
+                        <segue destination="kIG-ob-JSE" kind="show" identifier="showRevisions" id="HE4-Nq-bcD"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
-        </scene>
-        <!--Window Controller-->
-        <scene sceneID="jfp-s8-p4D">
-            <objects>
-                <windowController id="Dwg-bX-DJQ" sceneMemberID="viewController">
-                    <window key="window" title="Lazy Version Control - Revisions" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="pYg-W9-L9g">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="163" y="199" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
-                    </window>
-                    <connections>
-                        <segue destination="kIG-ob-JSE" kind="relationship" relationship="window.shadowedContentViewController" id="r5M-YC-W2F"/>
-                    </connections>
-                </windowController>
-                <customObject id="vpk-t5-oY6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="720" y="242"/>
         </scene>
         <!--Lazy Version Control - Revisions-->
         <scene sceneID="895-mU-THF">
@@ -277,14 +259,14 @@
                                 <rect key="frame" x="6" y="20" width="438" height="274"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <clipView key="contentView" ambiguous="YES" id="J2c-rY-Ii9">
-                                    <rect key="frame" x="1" y="1" width="436" height="272"/>
+                                    <rect key="frame" x="1" y="1" width="421" height="272"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="xVi-d2-r4b">
-                                            <rect key="frame" x="0.0" y="0.0" width="436" height="272"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="421" height="272"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="436" height="272"/>
+                                            <size key="minSize" width="421" height="272"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
@@ -296,7 +278,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="D1F-Fg-re5">
-                                    <rect key="frame" x="421" y="1" width="16" height="272"/>
+                                    <rect key="frame" x="422" y="1" width="15" height="272"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -308,7 +290,7 @@
                 </viewController>
                 <customObject id="X6n-PT-taU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="624"/>
+            <point key="canvasLocation" x="794" y="785"/>
         </scene>
     </scenes>
 </document>

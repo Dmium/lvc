@@ -13,24 +13,16 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     private var numRows : Int = 0
     private var fileNames : [String] = []
     private var fileDates : [NSNumber] = []
+    private var selectedFilePath : String = ""
+    public var connManager : ConnectionManager? = nil
     
     func getVersionedDocuments(){
-        let url = URL(string: "http://localhost:8080/api/getFileList")
-        let request = URLRequest(url: url!)
-        let response:AutoreleasingUnsafeMutablePointer<URLResponse?>?=nil
-        do {
-            let responseData = try NSURLConnection.sendSynchronousRequest(request, returning: response)
-            let jsonResult = try JSONSerialization.jsonObject(with: responseData, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSMutableDictionary
-            
-            self.numRows = jsonResult.count
-            
-            for file in jsonResult{
-                fileNames.append(file.key as! String)
-                fileDates.append(file.value as! NSNumber)
-            }
-        } catch(let e){
-            let alert = NSAlert.init(error: e)
-            alert.runModal()
+        let jsonResult = self.connManager?.getVersionedDocuments()
+        self.numRows = (jsonResult?.count)!
+        
+        for file in jsonResult!{
+            fileNames.append(file.key as! String)
+            fileDates.append(file.value as! NSNumber)
         }
 
     }
@@ -50,6 +42,14 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
+        }
+    }
+    
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if let destinationController = segue.destinationController as? RevisionsViewController{
+            destinationController.connManager = self.connManager!
+            print("File: " + selectedFilePath)
+            destinationController.fp = self.selectedFilePath
         }
     }
     
@@ -73,7 +73,8 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         let fileIndex: Int = self.versionedDocuments.selectedRow
         if(fileIndex >= 0 && fileIndex < self.fileNames.count){
             let fileName: String = self.fileNames[fileIndex]
-            let fileDate: NSNumber = self.fileDates[fileIndex]
+            
+            self.selectedFilePath = fileName
             performSegue(withIdentifier: "showRevisions", sender: nil)
             
         }
