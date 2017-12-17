@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140507401FE5F32E001CD284 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1405073E1FE5F32E001CD284 /* ConnectViewController.swift */; };
+		140507431FE5FBE9001CD284 /* ReplaceViewSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140507421FE5FBE9001CD284 /* ReplaceViewSegue.swift */; };
+		140507451FE5FD79001CD284 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140507441FE5FD79001CD284 /* ConnectionManager.swift */; };
 		148B0D7C1FE4A10F00BBC4C1 /* RevisionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148B0D7B1FE4A10F00BBC4C1 /* RevisionsViewController.swift */; };
 		14F637061FE2FEBD00FF97F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F637051FE2FEBD00FF97F6 /* AppDelegate.swift */; };
 		14F637081FE2FEBD00FF97F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F637071FE2FEBD00FF97F6 /* ViewController.swift */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1405073E1FE5F32E001CD284 /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		140507421FE5FBE9001CD284 /* ReplaceViewSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceViewSegue.swift; sourceTree = "<group>"; };
+		140507441FE5FD79001CD284 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		148B0D7B1FE4A10F00BBC4C1 /* RevisionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevisionsViewController.swift; sourceTree = "<group>"; };
 		14F637021FE2FEBD00FF97F6 /* lvc-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lvc-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F637051FE2FEBD00FF97F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +109,9 @@
 				14F6370B1FE2FEBD00FF97F6 /* Main.storyboard */,
 				14F6370E1FE2FEBD00FF97F6 /* Info.plist */,
 				148B0D7B1FE4A10F00BBC4C1 /* RevisionsViewController.swift */,
+				1405073E1FE5F32E001CD284 /* ConnectViewController.swift */,
+				140507421FE5FBE9001CD284 /* ReplaceViewSegue.swift */,
+				140507441FE5FD79001CD284 /* ConnectionManager.swift */,
 			);
 			path = "lvc-mac";
 			sourceTree = "<group>";
@@ -262,8 +271,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F637081FE2FEBD00FF97F6 /* ViewController.swift in Sources */,
+				140507451FE5FD79001CD284 /* ConnectionManager.swift in Sources */,
 				148B0D7C1FE4A10F00BBC4C1 /* RevisionsViewController.swift in Sources */,
+				140507431FE5FBE9001CD284 /* ReplaceViewSegue.swift in Sources */,
 				14F637061FE2FEBD00FF97F6 /* AppDelegate.swift in Sources */,
+				140507401FE5F32E001CD284 /* ConnectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
