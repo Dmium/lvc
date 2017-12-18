@@ -17,15 +17,19 @@ app.on('ready', function() {
 		mainWindow = null
 	});
 
-	mainWindow.loadURL('file://' + __dirname + '/app/index.html');
+	mainWindow.loadURL('file://' + __dirname + '/app/View/index.html');
 
 	var contents = mainWindow.webContents
 
 	fs.readFile(__dirname + '/app/css/styles.css', 'utf8', function(err, css){
 		contents.insertCSS(css);
 	});
+	
+	fs.readFile(__dirname + '/app/ConnectionManager.min.js', 'utf8', function(err, js){
+		contents.executeJavaScript(js);
+	});
 
-	fs.readFile(__dirname + '/app/lvc-native.min.js', 'utf8', function(err, js){
+	fs.readFile(__dirname + '/app/Controller/indexViewController.min.js', 'utf8', function(err, js){
 		contents.executeJavaScript(js);
 	});
 })

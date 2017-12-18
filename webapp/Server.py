@@ -3,6 +3,7 @@ from jinja2 import Environment, FileSystemLoader
 from webapp.Node import Node
 import time
 from WebWrapper import WebWrapper
+import json
 
 env = Environment(
     loader=FileSystemLoader('./webapp/'),
@@ -51,9 +52,15 @@ def get_file_list():
 
 @route('/api/getNumberRevisions/<fp:path>')
 def get_number_revisions(fp):
-    return str(WebWrapper().get_number_commits_for_path(fp))
+    return "{\"numRevisions\":" + str(WebWrapper().get_number_commits_for_path(fp)) + "}"
+
 @route('/api/getRevisionByIndex/<index>/<fp:path>')
 def get_revision_by_index(index, fp):
-    return WebWrapper().get_commit_for_index(int(index), fp)
+    return json.dumps({"content": WebWrapper().get_commit_for_index(int(index), fp)})
+
+@route('/api/registerClient')
+def register_client():
+    return "{\"success\": true}"
+
 def start(host, port):
     run(host=host, port=port)
