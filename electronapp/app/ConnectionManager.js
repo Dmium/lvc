@@ -2,19 +2,22 @@ function ConnectionManager(host, port){
 	this.host = host;
 	this.port = port;
 
-	this.makeRequest = function(requestEndpoint){
-		jQuery.get('http://' + this.host + ':' + this.port + '/' + requestEndpoint, function(r){
-			return $.parseJSON(r);
-		});
+	this.makeRequest = function(requestEndpoint, cb){
+		try{
+			jQuery.get('http://' + this.host + ':' + this.port + '/' + requestEndpoint, function(r){
+				cb($.parseJSON(r));
+			});
+		} catch(e) {
+			cb(null);
+		}
 	};
 
 	this.testConnection = function(cb){
-		var response = this.makeRequest('api/registerClient');
-		return response.success || false;
+		var response = this.makeRequest('api/registerClient', cb);
 	}
 
 	this.getVersionedFiles = function(cb){
-		return this.makeRequest('api/getFileList');
+		return this.makeRequest('api/getFileList', cb);
 	}
 
 	this.getNumberRevisions = function(fp){

@@ -7,8 +7,14 @@
 			window.$ = window.jQuery = require('jquery');
 			var link = document.createElement('link');
 			link.setAttribute('rel', 'stylesheet');
-			link.setAttribute('href', require('path').join(__dirname, 'css', 'styles.css'));
+			link.setAttribute('href', require('path').join(__dirname, '../css', 'styles.css'));
 			document.head.appendChild(link);
+			var connManagerScript = document.createElement('script');
+			connManagerScript.setAttribute('src', require('path').join(__dirname, '../ConnectionManager.min.js'));
+			document.head.appendChild(connManagerScript);
+			var script = document.createElement('script');
+			script.setAttribute('src', require('path').join(__dirname, '../Controller', 'filesViewController.min.js'));
+			document.head.appendChild(script);
 		</script>
 	</head>
 	<body>

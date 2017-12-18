@@ -4,7 +4,16 @@ $(document).ready(function(){
 		e.preventDefault();
 		var host = $('#hostname').val();
 		var port = $('#port').val();
-
-		console.log(ConnectionManager(host, port).testConnection());
+		
+		var testConnectionCb = function(response){
+			if(response.success == true){
+				var link = require('path').join(__dirname, 'files.html');
+				var persistDict = {'host': host, 'port': port};
+				window.name = JSON.stringify(persistDict);
+				window.location.assign(link);
+			}
+		}
+		
+		ConnectionManager(host, port).testConnection(testConnectionCb);
 	});
-})
+});
