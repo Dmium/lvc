@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Lazy Version Control</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<script>
+			window.$ = window.jQuery = require('jquery');
+			var link = document.createElement('link');
+			link.setAttribute('rel', 'stylesheet');
+			link.setAttribute('href', require('path').join(__dirname, '../css', 'styles.css'));
+			document.head.appendChild(link);
+			var connManagerScript = document.createElement('script');
+			connManagerScript.setAttribute('src', require('path').join(__dirname, '../ConnectionManager.min.js'));
+			document.head.appendChild(connManagerScript);
+			var jqueryUIScript = document.createElement('script');
+			jqueryUIScript.setAttribute('src', 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js')
+			jqueryUIScript.setAttribute('crossorigin', 'anonymous');
+			jqueryUIScript.setAttribute('integrity', 'sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=');
+			document.head.appendChild(jqueryUIScript);
+			var jqueryUILink = document.createElement('link');
+			jqueryUILink.setAttribute('rel', 'stylesheet');
+			jqueryUILink.setAttribute('href', 'https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css');
+			document.head.appendChild(jqueryUILink);
+			var script = document.createElement('script');
+			script.setAttribute('src', require('path').join(__dirname, '../Controller', 'revisionsViewController.min.js'));
+			document.head.appendChild(script);
+		</script>
+	</head>
+	<body>
+		<nav class='navbar navbar-light lvc-navbar'>
+			<a href='/' class='navbar-brand lvc-brand'>LVC</a>	
+		</nav>
+		<div class='container-fluid'>
+			<textarea class='col-sm' id='lvc-revisions-container'>
+			</textarea>
+		</div>
+		<div class='container-fluid'>
+			<div class='col-sm'>
+				<div id='lvc-commit-slider' />
+			</div>
+		</div>
+	</body>
+</html>

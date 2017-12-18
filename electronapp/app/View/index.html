@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Lazy Version Control</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<script>
+			window.$ = window.jQuery = require('jquery');
+			var link = document.createElement('link');
+			link.setAttribute('rel', 'stylesheet');
+			link.setAttribute('href', require('path').join(__dirname, '../css', 'styles.css'));
+			document.head.appendChild(link);
+		</script>
+	</head>
+	<body>
+		<nav class='navbar navbar-light lvc-navbar'>
+			<a href='/' class='navbar-brand lvc-brand'>LVC</a>	
+		</nav>
+		<div class="row">
+			<div class="container-fluid text-center">
+				<form>
+					<br />
+					<label for="hostname">Host: </label>
+					<input type="text" id="hostname">
+					<br />
+					<label for="port">Port: </label>
+					<input type="text" id="port">
+					<br />
+					<button id="connectBtn">Connect</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

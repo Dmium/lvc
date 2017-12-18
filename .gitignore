@@ -2,3 +2,5 @@ test/*
 __pycache__/
 Test.py
 .file_list
+node_modules
+.DS_Store
