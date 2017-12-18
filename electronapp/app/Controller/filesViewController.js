@@ -6,6 +6,17 @@ $(document).ready(function(){
 
 	var connManager = ConnectionManager(host, port);
 
+	var onFileClick = function(e){
+		e.preventDefault();
+		var fp = e.target.text;
+		if(fp != null){
+			var link = require('path').join(__dirname, 'revisions.html');
+			jsonDict.fp = fp;
+			window.name = JSON.stringify(jsonDict);
+			window.location.assign(link);
+		}
+	};
+
 	var versionedFileCb = function(response){
 		var i = 0;
 
@@ -13,7 +24,8 @@ $(document).ready(function(){
 			$('#lvc-versioned-files').append(
 				$('<tr />').append(
 					$('<td />').append(
-						$('<a>' + file + '</a>', {
+						$('<a />', {
+							'text': file,
 							'id': 'file-' + i
 						})
 					)
@@ -21,6 +33,7 @@ $(document).ready(function(){
 					$('<td>' + response[file] + '<td />')
 				)
 			);
+			$('#file-' + i).click(onFileClick);
 			i++;
 		}
 	};

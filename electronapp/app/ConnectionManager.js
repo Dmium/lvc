@@ -13,27 +13,28 @@ function ConnectionManager(host, port){
 	};
 
 	this.testConnection = function(cb){
-		var response = this.makeRequest('api/registerClient', cb);
+		this.makeRequest('api/registerClient', cb);
 	}
 
 	this.getVersionedFiles = function(cb){
-		return this.makeRequest('api/getFileList', cb);
+		this.makeRequest('api/getFileList', cb);
 	}
 
-	this.getNumberRevisions = function(fp){
-		var response = this.makeRequest('api/getNumberRevisions/' + fp);
-		return response.numRevisions;
+	this.getNumberRevisions = function(fp, cb){
+		this.makeRequest('api/getNumberRevisions/' + fp, cb);
 	};
 
 	this.getRevisionByIndex = function(index, fp, cb){
-		var response = this.makeRequest('api/getRevisionByIndex/' + index + '/' + fp);
-		return response.content;
+		this.makeRequest('api/getRevisionByIndex/' + index + '/' + fp, cb);
 	}
 
 	this.getLatestRevision = function(fp, cb){
-		var latestRevisionIndex = this.getNumberRevisions(fp) - 1;
-		var response = this.getRevisionByIndex(latestRevisionIndex, fp);
-		return response.content;
+		var latestRevisionIndexCb = function(response){
+			var latestRevisionIndex = response.numRevisions - 1;
+
+			this.getRevisionByIndex(latestRevisionIndex, fp, cb);
+		}
+		this.getNumberRevisions(fp, latestRevisionIndexCb);
 	}
 
 	return this;
