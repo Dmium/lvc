@@ -1,6 +1,9 @@
 class File():
     def apply_delta(self, delta):
         # Apply changes to file from a delta
+        
+        for lineno, change in delta:
+
         pass
 
     def apply_deltas(self, deltas):
